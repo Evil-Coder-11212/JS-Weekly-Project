@@ -4,11 +4,11 @@ Here I will publish my **Weekly** Projects of javascript everyday, there are 6 w
 ## Days Are Here
 |      Day      |         Problem        |
 | ------------- | ---------------------- |
-|   Day 1   | Weekly Project   |
-|   Day 2   | Weekly Project   |
-|   Day 3   | Weekly Project   |
-|   Day 4   | Weekly Project |
-|   Day 5   | Weekly Project   |
+|   Week 1   | Weekly Project   |
+|   Week 2   | Weekly Project   |
+|   Week 3   | Weekly Project   |
+|   Week 4   | Weekly Project |
+|   Week 5   | Weekly Project   |
 
 ## About Me
 I am a regular coder with a bit of gaming.<br/>
