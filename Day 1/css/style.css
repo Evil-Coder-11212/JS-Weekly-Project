@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+/* All colors, sizes, font */
+:root{
+    --primary-color: green;
+    --secondary-color: rgb(39, 39, 39);
+    ---font-size: 16px;
+    --font-family: 'Nunito', sans-serif;
+    --all-transition: ease-in-out 0.4s 0s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Giving all text a font family */
+body{
+    font-family: var(--font-family);
+}
+
+/* Hader */
+header{
+    background-color: var(--secondary-color);
+    width: 100vw;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.brand-container{
+    width: 100px;
+    height: 52px;
+    padding: 5px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-container > img{
+    width: 32px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.brand-container > p{
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+}
+
+/* Nav */
+nav{
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; 
+    margin: 0 10px;
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+    padding: 5px;
+}
+
+nav > ul > li{
+    margin: 0 10px;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+    transition: var(--all-transition);
+}
+
+.main-content{
+    width: 100vw;
+    height: 77vh;display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    background-color: var(--secondary-color);
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   width: 90%;
+   height: 95%;
+   border-radius: 20px;
+   background-image: url('/Weekly Problems/Day 1/img/bg.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 5px;
+}
+
+.container > h1{
+    margin: 20px 0 0 25px;
+    padding: 5px;
+}
+
+.main-footer{
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.button-container > button{
+    margin: 0 10px;
+    background-color: white;
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--all-transition);
+    cursor: pointer;
+}
+
+.main-footer > input{
+    width: 70%;
+    margin: 10px 0 0 0;
+}
+
+.songList{
+    display: flex;
+    justify-content:left;
+    align-items: flex-start;
+    padding: 5px;
+    height: 85%;
+}
+
+.songItem{
+    height: 5\30px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0 12px 30px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 34px;
+    width: 350px;
+    transition: ease-in-out 0.2s 0s;
+    cursor: pointer;
+}
+
+.songItem img{
+    width: 22px;
+    margin: 5px 0;
+    border-radius: 34px;
+}
+
+
+/* Animations */
+
+nav > ul > li > a:hover{
+    color: rgb(209, 209, 209);
+}
+
+.brand-container > img:hover{
+    animation: bigToSmall 0.7s infinite 0s;
+}
+
+.songItem > img:hover{
+    animation: bigToSmall 0.7s infinite 0s;
+
+}
+
+.songItem > p:hover{
+    font-family: bolder;
+}
+
+.main-footer > .button-container > button:hover{
+    transform: scale(1.05);
+}
+
+.songItem:hover{
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+/* brand animation on hovering */
+@keyframes bigToSmall  {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.07);
+
+    }100%{
+        transform: scale(1);
+    }
+}

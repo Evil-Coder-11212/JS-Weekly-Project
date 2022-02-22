@@ -1,0 +1,16 @@
+@media screen and (max-width: 655px) {
+    .container > h1{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .songList{
+        justify-content: center;
+        height: 75%;
+    }
+    
+    .songItem{
+        height: 28px;
+        width: 250px;
+    }
+}
