@@ -1,7 +1,7 @@
 const playBtn = document.getElementById('play');
 const icon = document.getElementById('play-icon');
 const progressBar = document.getElementById('progress-bar');
-let audio = new Audio("/Weekly Problems/Day 1/songs/1.mp3");
+let audioElement = new Audio("");
 const songItems = Array.from(document.querySelectorAll(".songItem"));
 const listPlay = Array.from(document.querySelectorAll(".songItemPlay"));
 
@@ -26,44 +26,79 @@ songItems.forEach((element, i) => {
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
     element.getElementsByClassName("timestamp")[0].innerText = songs[i].duration;
 })
-
-const makeAllPLays = ()=>{
-    listPlay.forEach((element) => {
-
-            element.classList.add("fa-play-circle");
-            element.classList.remove("fa-pause-circle");
-    
-    })
-    
-}
-
-listPlay.forEach((element) => {
-
-    element.addEventListener('click', (e) => {
-        makeAllPLays();
-        e.target.classList.remove("fa-play-circle");
-        e.target.classList.add("fa-pause-circle");
-    })
-
-})
-
 playBtn.addEventListener('click', function () {
-    if (audio.paused || audio.currentSrc <= 0) {
-        audio.play();
+    if (audioElement.paused || audioElement.currentSrc <= 0) {
+        audioElement.play();
         icon.classList.remove("fa-play-circle");
         icon.classList.add("fa-pause-circle");
     } else {
-        audio.pause();
+        audioElement.pause();
         icon.classList.remove("fa-pause-circle");
         icon.classList.add("fa-play-circle");
     }
 })
 
-audio.addEventListener('timeupdate', () => {
-    let progress = parseInt((audio.currentTime / audio.duration) * 100)
+audioElement.addEventListener('timeupdate', () => {
+    let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100)
     progressBar.value = progress;
 })
 
 progressBar.addEventListener('change', () => {
-    audio.currentTime = progressBar.value * audio.duration / 100;
+    audioElement.currentTime = progressBar.value * audioElement.duration / 100;
+})
+
+
+const makeAllPLays = () => {
+    listPlay.forEach((element) => {
+
+        element.classList.add("fa-play-circle");
+        element.classList.remove("fa-pause-circle");
+
+    })
+
+}
+
+let index = 0;
+listPlay.forEach((element) => {
+
+    element.addEventListener('click', (e) => {
+
+            
+            makeAllPLays();
+            index = parseInt(e.target.id);
+            e.target.classList.remove("fa-play-circle");
+            e.target.classList.add("fa-pause-circle");
+            audioElement.src = `/Weekly Problems/Day 1/songs/${index + 1}.mp3`;
+            audioElement.currentTime = 0;
+            audioElement.play();
+            listPlay.classList.remove("fa-play-circle");
+            listPlay.classList.add("fa-pause-circle");
+    })
+
+})
+
+document.getElementById("next").addEventListener('click', () => {
+    if (index >= 7) {
+        index = 0;
+    } else {
+        index += 1;
+    }
+    audioElement.src = `/Weekly Problems/Day 1/songs/${index}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    listPlay.classList.remove("fa-play-circle");
+    listPlay.classList.add("fa-pause-circle");
+})
+
+document.getElementById("prev").addEventListener('click', () => {
+    if (index < 0) {
+        index = 7;
+    } else {
+        index -= 1;
+    }
+    audioElement.src = `/Weekly Problems/Day 1/songs/${index + 1}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    listPlay.classList.remove("fa-play-circle");
+    listPlay.classList.add("fa-pause-circle");
 })
