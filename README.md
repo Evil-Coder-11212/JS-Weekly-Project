@@ -15,6 +15,15 @@ I am a regular coder with a bit of gaming.<br/>
 I know [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JS](https://en.wikipedia.org/wiki/JS)<br/>
 My GitHub: [Evil-Coder](https://github.com/Evil-Coder-11212)
 
+## All Projects Name
+1. Spotify Clone
+-
+-
+-
+2. Count Down Timer
+-
+-
+-
 ## License & CopyRights
 Copyright (c) 2022, Evil-Coder-11212<br/>
 
