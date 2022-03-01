@@ -1,0 +1,16 @@
+@media screen and (max-width:385px) {
+    .main-content>button {
+        display: block;
+
+        width: 90%;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .detial {
+        align-items: center;
+        text-align: center;
+    }
+}
