@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>Meter to feet and vest versa</title>
+  </head>
+
+  <body>
+    <div class="main-content">
+      <p id="title">Feet to meter and meter to feet</p>
+      <div class="container unir" id="first-container">
+        <div class="inputs-container">
+          <input type="number" name="meter" id="meter-input" placeholder="Enter A Meter value" autofocus autocomplete="on">
+          <input type="number" name="feet" id="feet-input" placeholder="Enter A Feet value" autocomplete="on">
+        </div>
+        <p id="results">0</p>
+        <button type="button" name="calculate" id="calculate-btn">Calculate</button>
+      </div>
+      <div class="container display-off unir" id="last-container">
+        <div class="item-container">
+          <div class="item">
+            <div class="question-container"><p>Converting meter to feet?</p></div>
+            <p>Just type meter in meter input and leave black the feet input</p>
+          </div>
+          <div class="item">
+            <div class="question-container"><p>Converting feet to meter?</p></div>
+            <p>Just type feet in feet input and leave black the meter input</p>
+          </div>
+          <div class="item">
+            <div class="question-container"><p>Converting meter and feet together</p></div>
+            <p>Just type both values in both input </p>
+          </div>
+        </div>
+      </div>
+      <button type="button" name="switch" id="switch-btn">How to Use</button>
+    </div>
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

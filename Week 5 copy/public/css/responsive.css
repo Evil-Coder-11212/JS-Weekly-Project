@@ -1,0 +1,19 @@
+@media screen and (max-width: 800px) {
+  .inputs-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .inputs-container > input {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .container > button {
+    width: 95%;
+  }
+
+  .inputs-container > input {
+    width: 97%;
+  }
+}
