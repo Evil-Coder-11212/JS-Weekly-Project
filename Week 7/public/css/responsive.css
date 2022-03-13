@@ -1,0 +1,10 @@
+@media screen and (max-width: 510px) {
+  .container {
+    width: 95%;
+  }
+
+  .container > label {
+    align-items: left;
+    background-color: red;
+  }
+}
