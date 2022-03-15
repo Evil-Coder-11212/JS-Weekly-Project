@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --primary-color: rgb(26, 26, 26);
+  --secondary-color: rgb(243, 243, 243);
+  --font-family: Nunito, sans-serif;
+  --box-shadow: rgb(0 0 0) 1px 1px 3px 0px inset,
+    rgb(48 48 48 / 50%) -1px -1px 3px 1px inset;
+  --all-transitions: transform ease-in-out 0.3s 0s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.main-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 650px;
+  height: 250px;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputs-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.inputs-container > input {
+  width: 250px;
+  padding: 15px;
+  height: 35px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  color: var(--secondary-color);
+}
+
+.container > p {
+  font-weight: bold;
+  color: var(--secondary-color);
+  transition: var(--all-transitions);
+  cursor: pointer;
+}
+
+.btn-container {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-container > button {
+  width: 180px;
+  height: 33px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: var(--all-transitions);
+}
+
+/* NTH CHILD */
+.inputs-container > input::placeholder {
+  color: var(--secondary-color);
+}
+
+/* Animations */
+.btn-container > button:hover {
+  transform: scale(1.08);
+}
+
+.btn-container > button:active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: none;
+  border: 2px solid var(--secondary-color);
+}
+
+.container > p:hover {
+  transform: scale(1.3);
+}
