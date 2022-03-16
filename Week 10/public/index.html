@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the number</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <p id="hint-text">HINT:</p>
+      <div class="container">
+        <div class="input-container">
+          <input
+            type="number"
+            name="guess-input"
+            id="guess-input"
+            autofocus
+            autocomplete="on"
+            placeholder="Enter your guessing value here"
+          />
+        </div>
+        <p id="timer">0</p>
+        <div class="container-btn">
+          <button type="button" name="guess-it" id="guess-btn">Guess</button>
+          <button type="button" name="answer-it" id="answer-btn">Answer</button>
+        </div>
+      </div>
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

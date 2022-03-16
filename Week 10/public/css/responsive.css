@@ -1,0 +1,23 @@
+@media screen and (max-width: 670px) {
+  .container-btn {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container-btn > button {
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  /* NTH CHILD */
+
+  .container-btn > button:nth-child(1) {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .input-container > input {
+    width: 90%;
+  }
+}
